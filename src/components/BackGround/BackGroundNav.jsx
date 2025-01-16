@@ -5,7 +5,6 @@ const ChangeBackgroundImage = () => {
         document.body.style.backgroundImage = `url(${url})`;
         document.body.style.backgroundSize = 'cover';
         document.body.style.backgroundRepeat = 'no-repeat';
-        // document.body.style.minHeight = '90vh'
     };
 
     return (

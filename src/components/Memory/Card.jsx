@@ -135,8 +135,8 @@ const Card = () => {
                     </article>
                 </>
             )}
-            <button onClick={() => startNewGame(false)}>Starta ny omgång</button>
-            <button onClick={() => startNewGame(true)}>Starta nytt spel (Nollställ poäng)</button>
+            <button onClick={() => startNewGame(false)}>Starta ny omgång (behåll poäng)</button>
+            <button onClick={() => startNewGame(true)}>Starta nytt spel (nollställ poäng)</button>
         </>
     );
 };
