@@ -27,3 +27,11 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+p {
+    color: white;
+}
+
+h1 {
+    color: white;
+}

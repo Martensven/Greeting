@@ -10,10 +10,17 @@ html {
   text-align: center;
 }
 
-:root {
+body {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3b/Good_Morning_From_the_International_Space_Station.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.bgFix {
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  bottom: 10vh;
 }
 
 .greetings {
@@ -21,6 +28,10 @@ html {
   background-color: rgba(255, 255, 255, 0.486);
   border: white solid;
   padding: 10px;
+}
+
+.greetings h1 {
+  text-shadow: 1px 1px 2px black;
 }
 
 h1 {

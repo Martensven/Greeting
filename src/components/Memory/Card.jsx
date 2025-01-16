@@ -85,11 +85,11 @@ const Card = () => {
 
     const determineWinner = () => {
         if (scores.player1 > scores.player2) {
-            setWinner("Spelare 1 vinner!");
+            setWinner("Spelare 1 vinner denna omgång!");
         } else if (scores.player2 > scores.player1) {
-            setWinner("Spelare 2 vinner!");
+            setWinner("Spelare 2 vinner denna omgång!");
         } else {
-            setWinner("Det är oavgjort!");
+            setWinner("Denna omgång blev det oavgjort!");
         }
     };
 
@@ -113,7 +113,7 @@ const Card = () => {
                                     key={index}
                                     className="removedCard"
                                     style={{
-                                        backgroundColor: "white",
+                                        backgroundColor: "rgba(255, 255, 255, 0)",
                                     }}
                                 ></section>
                             ) : (
