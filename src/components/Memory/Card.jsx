@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Card.css";
+
 import colors from "./Colors";
 import ShuffleArray from "./ShuffleArray";
 
@@ -105,34 +105,36 @@ const Card = () => {
                         <p>Spelare 2: {scores.player2}</p>
                         <p>Nuvarande tur: Spelare {currentPlayer}</p>
                     </div>
-                    <article className="card-container">
-                        {shuffledColors.map((color, index) =>
-                            removedCards.includes(index) ? (
-                                // Rendera removedCard för borttagna kort
-                                <section
-                                    key={index}
-                                    className="removedCard"
-                                    style={{
-                                        backgroundColor: "rgba(255, 255, 255, 0)",
-                                    }}
-                                ></section>
-                            ) : (
-                                // Rendera klickbara kort
-                                <section
-                                    key={index}
-                                    className="card"
-                                    style={{
-                                        backgroundColor: clickedCards.some(
-                                            (card) => card.index === index
-                                        )
-                                            ? color.name.toLowerCase()
-                                            : "brown", // Dold färg
-                                    }}
-                                    onClick={() => toggleCardColor(index)} // Hantera klick
-                                ></section>
-                            )
-                        )}
-                    </article>
+                    <div className="memory-box">
+                        <article className="card-container">
+                            {shuffledColors.map((color, index) =>
+                                removedCards.includes(index) ? (
+                                    // Rendera removedCard för borttagna kort
+                                    <section
+                                        key={index}
+                                        className="removedCard"
+                                        style={{
+                                            backgroundColor: "rgba(255, 255, 255, 0)",
+                                        }}
+                                    ></section>
+                                ) : (
+                                    // Rendera klickbara kort
+                                    <section
+                                        key={index}
+                                        className="card"
+                                        style={{
+                                            backgroundColor: clickedCards.some(
+                                                (card) => card.index === index
+                                            )
+                                                ? color.name.toLowerCase()
+                                                : "brown", // Dold färg
+                                        }}
+                                        onClick={() => toggleCardColor(index)} // Hantera klick
+                                    ></section>
+                                )
+                            )}
+                        </article>
+                    </div>
                 </>
             )}
             <button onClick={() => startNewGame(false)}>Starta ny omgång (behåll poäng)</button>
