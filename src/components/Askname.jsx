@@ -9,17 +9,30 @@ const AskName = ({ onNameSubmit }) => {
     };
 
     const resetButton = () => {
-        onNameSubmit(inputRef.value = "");
-    }
+        inputRef.current.value = ""; // Reset inputfältet
+        onNameSubmit(""); // Skicka en tom sträng
+    };
 
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            handleButtonClick(); // Om Enter trycks, trigga knappens onClick
+        } else if (e.key === "Escape") {
+            resetButton(); // Om Escape trycks, återställ fältet
+        }
+    };
 
     return (
         <>
-            <input ref={inputRef} type="text" placeholder="Enter your name" />
+            <input
+                ref={inputRef}
+                type="text"
+                placeholder="Enter your name"
+                onKeyPress={handleKeyPress} // Lyssna på tangenttryckningar
+            />
             <button onClick={handleButtonClick}>Enter</button>
             <button onClick={resetButton}>Reset</button>
         </>
     );
 };
 
-export default AskName; 
+export default AskName;
