@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import TimeOfDay from "./TimeOfDay";
 import AskName from "./Askname";
 
+
 const Greeting = () => {
     const [name, setName] = useState(""); // Hantera namnet i Greeting
 
     return (
-        <div>
+        <div className="greetings">
 
 
 

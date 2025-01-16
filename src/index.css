@@ -10,8 +10,28 @@ html {
   text-align: center;
 }
 
+:root {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3b/Good_Morning_From_the_International_Space_Station.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.greetings {
+  margin-top: 10vh;
+  background-color: rgba(255, 255, 255, 0.486);
+  border: white solid;
+  padding: 10px;
+}
+
 h1 {
   color: black;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 button {
@@ -29,4 +49,8 @@ button:hover {
 button:active {
   color: black;
   background-color: rgb(172, 172, 172);
+}
+
+a {
+  text-decoration: none;
 }
