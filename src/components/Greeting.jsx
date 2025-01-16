@@ -9,16 +9,17 @@ const Greeting = () => {
 
     return (
         <>
-            <div className="greetings">
+            <div className="greetings-container">
+                <div className="greetings">
 
-                {/* Visa hälsning */}
-                <h1>
-                    <TimeOfDay />{name && `, ${name}!`} {/* Om ett namn finns, lägg till det */}
-                </h1>
-                {/* Fråga efter namnet */}
-                <AskName onNameSubmit={(enteredName) => setName(enteredName)} />
+                    {/* Visa hälsning */}
+                    <h1>
+                        <TimeOfDay />{name && `, ${name}!`} {/* Om ett namn finns, lägg till det */}
+                    </h1>
+                    {/* Fråga efter namnet */}
+                    <AskName onNameSubmit={(enteredName) => setName(enteredName)} />
+                </div>
             </div>
-
         </>
     );
 };
