@@ -69,12 +69,15 @@ input {
   width: 100px;
 }
 
-.greetings button {
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
   border: none;
   border-radius: 5px;
-  box-shadow: 1px 2px 2px black;
-  margin: 5px;
-  height: 40px;
+  cursor: pointer;
 }
 
 button:hover {
@@ -90,6 +93,14 @@ button:active {
 a {
   text-decoration: none;
   color: white;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
 }
 
 .BgFix {
@@ -121,22 +132,81 @@ a {
   border: 2px rgb(54, 54, 54) dotted;
 }
 
-button {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 p {
   color: white;
 }
 
 h1 {
   color: white;
+}
+
+.stopwatch-container {
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid black 1px;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 100%, 0.408);
+  padding: 20px;
+
+}
+
+.display {
+  font-size: 5rem;
+  font-family: monospace;
+  text-shadow: 2px 2px 2px;
+}
+
+.controls button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
+
+}
+
+.startBtn {
+  background-color: green;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.startBtn:hover {
+  background-color: hsl(120, 100%, 35%);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.stopBtn {
+  background-color: rgba(170, 170, 170, 0.774);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.stopBtn:hover {
+  background-color: hsla(0, 0%, 80%, 0.774);
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.resetBtn {
+  background-color: red;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.resetBtn:hover {
+  background-color: hsl(0, 100%, 70%);
+  color: white;
+  text-shadow: 1px 1px 1px black;
 }

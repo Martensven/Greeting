@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
-const AskName = ({ onNameSubmit }) => {
+function AskName({ onNameSubmit }) {
     const inputRef = useRef(null);
 
     const handleButtonClick = () => {
@@ -21,18 +21,19 @@ const AskName = ({ onNameSubmit }) => {
         }
     };
 
+
     return (
         <>
             <input
                 ref={inputRef}
                 type="text"
-                placeholder="Enter your name"
+                placeholder="Vad heter du?"
                 onKeyPress={handleKeyPress} // Lyssna på tangenttryckningar
             />
             <button onClick={handleButtonClick}>Enter</button>
             <button onClick={resetButton}>Reset</button>
         </>
     );
-};
+}
 
 export default AskName;

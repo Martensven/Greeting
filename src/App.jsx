@@ -1,5 +1,6 @@
 import Greeting from './components/Greeting';
 import Card from './components/Memory/Card';
+import Stopwatch from './components/Stopwatch/Stopwatch';
 import NavLink from './components/nav';
 import ChangeBackgroundImage from './components/BackGround/BackGroundNav';
 import { Routes, Route } from 'react-router-dom';
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/Greeting" element={<Greeting />} />
         <Route path="/Memory" element={<Card />} />
+        <Route path="/Stopwatch" element={<Stopwatch />} />
       </Routes>
       <ChangeBackgroundImage />
     </>

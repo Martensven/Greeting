@@ -4,8 +4,9 @@ let NavLink = () => {
 
     return (
         <nav className="headNav">
-            <button ><Link to="/Greeting" className="navLink">Home</Link></button>
-            <button><Link to="/Memory" className="navLink">Memory</Link></button>
+            <Link to="/Greeting" className="navLink"><button>Home</button></Link>
+            <Link to="/Memory" className="navLink"><button>Memory</button></Link>
+            <Link to="/Stopwatch" className="navLink"><button>Stop-watch</button></Link>
         </nav>
     )
 }
