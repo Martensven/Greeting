@@ -1,7 +1,6 @@
 html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   box-sizing: border-box;
 }
 
@@ -12,31 +11,38 @@ body {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  width: 95vw;
-  min-height: 100vh;
+  width: 100svw;
+  min-height: 100svh;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3b/Good_Morning_From_the_International_Space_Station.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
   position: relative;
 }
 
 .headNav {
-  width: 95vw;
-  height: 7.5vh;
+  width: 100%;
+  height: 110px;
   display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   position: sticky;
-  top: 2vh;
+  top: 1svh;
   margin: 0;
   padding: 0;
 }
 
+.headNav button {
+  height: 50px;
+  width: 150px;
+  font-size: smaller;
+  flex-grow: 1;
+  margin: 10px;
+}
+
 .greetings-container {
-  width: 95vw;
-  height: calc(100vh - 7.5vh);
+  width: 95svw;
+  height: 80svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +55,6 @@ body {
   max-width: 50vw;
   min-width: 330px;
   text-align: center;
-
 }
 
 .greetings h1 {
@@ -70,7 +75,6 @@ input {
 }
 
 button {
-  margin: 10px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #4caf50;
@@ -78,6 +82,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin: 10px;
 }
 
 button:hover {
@@ -103,15 +108,15 @@ a:active {
   color: inherit;
 }
 
-.BgFix {
-  position: sticky;
-  bottom: 2vh;
+.memory-main {
+  min-height: 100svh;
 }
 
 .memory-box {
-  width: 95vw;
+  width: 95svw;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   overflow-x: hidden;
 }
 
@@ -119,15 +124,14 @@ a:active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  max-width: 34vw;
+  max-width: 34svw;
   min-width: 350px;
+  height: 330px;
 }
 
 .card {
-  max-width: 500px;
-  min-width: 70px;
-  max-height: 500px;
-  min-height: 70px;
+  width: 72.5px;
+  height: 72.5px;
   background-color: rgb(81, 255, 0);
   border: 2px rgb(54, 54, 54) dotted;
 }
@@ -141,9 +145,11 @@ h1 {
 }
 
 .stopwatch-container {
-  width: 95vw;
+  width: 95svw;
   display: flex;
   justify-content: center;
+  margin-top: 20svh;
+  height: 80svh;
 }
 
 .stopwatch {
@@ -154,7 +160,8 @@ h1 {
   border-radius: 5px;
   background-color: hsla(0, 0%, 100%, 0.408);
   padding: 20px;
-
+  height: 20svh;
+  margin-top: 20vh;
 }
 
 .display {
@@ -165,14 +172,13 @@ h1 {
 
 .controls button {
   font-size: 1.5rem;
-  padding: 10px 20px;
   margin: 5px;
-  min-width: 125px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.5 ease;
-
+  padding: 10px;
+  width: 100px;
 }
 
 .startBtn {
@@ -209,4 +215,80 @@ h1 {
   background-color: hsl(0, 100%, 70%);
   color: white;
   text-shadow: 1px 1px 1px black;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20svh;
+  height: 80svh;
+}
+
+.app {
+  z-index: 99;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: hsl(0, 0%, 100%, 0.5);
+  width: 800px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+input {
+  width: 80%;
+  margin-right: 10px;
+}
+
+.inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addBtn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 11.5px;
+  margin-top: 10px;
+  width: 100px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn {
+  padding: 11.5px;
+  background-color: #a72828;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
+
+li span {
+  cursor: pointer;
+}
+
+.BgFix {
+  position: sticky;
+  bottom: 1svh;
+  margin-top: 5svh;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

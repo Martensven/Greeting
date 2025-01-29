@@ -94,7 +94,7 @@ const Card = () => {
     };
 
     return (
-        <>
+        <div className="memory-main">
             {winner ? (
                 <h1>{winner}</h1>
             ) : (
@@ -139,7 +139,7 @@ const Card = () => {
             )}
             <button onClick={() => startNewGame(false)}>Starta ny omgång (behåll poäng)</button>
             <button onClick={() => startNewGame(true)}>Starta nytt spel (nollställ poäng)</button>
-        </>
+        </div>
     );
 };
 
