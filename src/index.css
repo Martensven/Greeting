@@ -145,11 +145,10 @@ h1 {
 }
 
 .stopwatch-container {
-  width: 95svw;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 20svh;
-  height: 80svh;
 }
 
 .stopwatch {
@@ -159,13 +158,13 @@ h1 {
   border: solid black 1px;
   border-radius: 5px;
   background-color: hsla(0, 0%, 100%, 0.408);
-  padding: 20px;
-  height: 20svh;
   margin-top: 20vh;
+  height: auto;
+  padding: 15px;
 }
 
 .display {
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: monospace;
   text-shadow: 2px 2px 2px;
 }
